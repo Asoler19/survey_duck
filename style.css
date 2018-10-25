@@ -1,0 +1,15 @@
+
+
+.section-follow .fa-4x{
+    margin: 5px 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .video-container {
+        display: none;
+    }
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: #dd2c00; }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
