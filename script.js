@@ -11,25 +11,21 @@ M.Slider.init(slider, {
     interval: 6000
 });
 
-//Autocomplete
-const autocomplete = document.querySelector('.autocomplete');
-M.Autocomplete.init(autocomplete, {
-    data: {
-        "Aruba": null,
-        "Cancun Mexico": null,
-        "Hawaii": null,
-        "Florida": null,
-        "California": null,
-        "Jamaica": null,
-        "Europe": null,
-        "The Bahamas": null,
-    }
-});
-
-//Material Boxed (Gallery)
-const materialBoxed = document.querySelectorAll('.materialboxed'); //using querySelectorAll (not querySelector, as it will work only on first element/photo)
-M.Materialbox.init(materialBoxed, {});
-
+       
 //Scrollspy
 const scrollspy = document.querySelectorAll('.scrollspy');
 M.ScrollSpy.init(scrollspy, {});
+
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
