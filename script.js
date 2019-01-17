@@ -7,8 +7,8 @@ const slider = document.querySelector('.slider');
 M.Slider.init(slider, {
     indicators: false,
     height: 500,
-    transition: 500,
-    interval: 3000
+    transition: 200,
+    interval: 6000
 });
 
        
@@ -25,7 +25,7 @@ $(document).ready(function(){
         } 
     }); 
     $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 300); 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
         return false; 
     }); 
 });
